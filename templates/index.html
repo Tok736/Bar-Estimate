@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block page_title %} 
+Main Page - {{ super() }} 
+{% endblock %}
+
+{% block h1_title %} Hello everyone. Welcome to {{ self.page_title.super() }} {% endblock %}
+
+{% block content %}{% endblock %}
