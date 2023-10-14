@@ -1,10 +1,9 @@
 from db import db
 
-class Cocktail(db.Model):
+class Ingredient(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    first_name = db.Column(db.String(100), nullable=False)
-    second_name = db.Column(db.String(100))
-    age = db.Column(db.Integer)
+    ingredient_group = db.Column(db.String(100), nullable=False)
+    name = db.Column(db.String(100))
 
     def __repr__(self):
-        return f"<Doctor {self.first_name} {self.second_name}>"
+        return f"<{self.ingredient_group} - {self.name}>"

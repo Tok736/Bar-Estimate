@@ -6,4 +6,19 @@ Ingredients - {{ super() }}
 
 {% block h1_title %} Ingredients {% endblock %}
 
-{% block content %}{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h4>Ingredient table</h4>
+        </div>
+    </div>
+    {% for i, ingredient in enumerated_ingredient_list %}
+        <div class="row">
+            <div class="col-1">{{ i + 1 }}</div>
+            <div class="col-3">{{ ingredient.ingredient_group }}</div>
+            <div class="col">{{ ingredient.name }}</div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
